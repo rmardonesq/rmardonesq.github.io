@@ -1,0 +1,120 @@
+// Rodrigo Mardones
+// rmardonesq@gmail.com
+
+//meyer reset
+@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+@alturaHeader:15%;
+@alturaPrincipal:auto;
+@alturaLinks:auto;
+@anchoSeparador:0.5rem;
+@colorBordes:#DDD;
+@colorFacebook:#29487d;
+@colorGmail:#D44638;
+@colorInstagram:#c13584;
+@colorLinks:#5851db;
+@colorPrincipal:#282827;
+@colorPrincipalPalette1:#58616a;
+@colorTextoPrincipal:#FFF;
+@colorTwitter:#1da1f2;
+a{
+    color:@colorLinks;
+    text-decoration: none;
+    &:hover{
+        color:@colorBordes;
+        text-decoration: underline;
+        transition:2s;
+    }
+}
+body,html{
+    height: 100%;
+    min-height: 100%;
+    min-width:100%;
+    width: 100%;
+}
+body{
+    background:@colorPrincipal;
+    color:@colorTextoPrincipal;
+    display: grid;
+    gap: @anchoSeparador;
+    grid-template-rows: @alturaHeader @alturaPrincipal @alturaLinks;
+    #cabecera{
+        h1{
+            background: linear-gradient(to right, @colorPrincipalPalette1, @colorPrincipal);
+            font-family: 'Montserrat', sans-serif;
+            padding-bottom:2px;
+            #internoH1{
+                margin:0;
+                padding:0;
+                background:@colorPrincipal;
+            }
+        }
+        #redes{
+            text-align: right;
+            padding-right:calc(@anchoSeparador * 2);
+            a{
+                color:@colorTextoPrincipal;
+                font-size:1.5rem;
+                margin-right:@anchoSeparador;
+                &.facebook{
+                    &:hover{
+                        color:@colorFacebook;
+                    }
+                }
+                &.gmail{
+                    &:hover{
+                        color:@colorGmail;
+                    }
+                }
+                &.instagram{
+                    &:hover{
+                        color:@colorInstagram;
+                    }
+                }
+                &.twitter{
+                    &:hover{
+                        color:@colorTwitter;
+                    }
+                }
+            }
+        }
+    }
+    #principal,#links{
+        display: grid;
+        gap:@anchoSeparador;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        font-family: 'Montserrat', sans-serif;
+        article{
+            &.work{
+                .grilla{
+                    display: grid;
+                    gap:@anchoSeparador;
+                    grid-template-columns: 40% auto;
+                    margin-bottom: calc(@anchoSeparador * 2);
+                    .itemName{
+                        text-align: right;
+                    }
+                }
+            }
+            h3{
+                margin-bottom:calc(@anchoSeparador * 2);
+                text-align:center;
+            }
+        }
+    }
+}
+h1,h2,h3,h4,h5{
+    font-weight: bold;
+}
+h1{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+p{
+    line-height: 1.5em;
+    padding:@anchoSeparador;
+}
+.bold{
+    font-weight: bold;
+}
