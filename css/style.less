@@ -3,7 +3,7 @@
 
 //meyer reset
 @import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
-@alturaHeader:15%;
+@alturaHeader:12%;
 @alturaPrincipal:auto;
 @alturaLinks:auto;
 @anchoSeparador:0.5rem;
@@ -38,6 +38,7 @@ body{
     gap: @anchoSeparador;
     grid-template-rows: @alturaHeader @alturaPrincipal @alturaLinks;
     #cabecera{
+        padding:@anchoSeparador;
         h1{
             background: linear-gradient(to right, @colorPrincipalPalette1, @colorPrincipal);
             font-family: 'Montserrat', sans-serif;
@@ -89,14 +90,14 @@ body{
                     display: grid;
                     gap:@anchoSeparador;
                     grid-template-columns: 40% auto;
-                    margin-bottom: calc(@anchoSeparador * 2);
+                    margin-bottom: @anchoSeparador;
                     .itemName{
                         text-align: right;
                     }
                 }
             }
             h3{
-                margin-bottom:calc(@anchoSeparador * 2);
+                margin-bottom:@anchoSeparador;
                 text-align:center;
             }
         }
@@ -114,6 +115,8 @@ h3{
 p{
     line-height: 1.5em;
     padding:@anchoSeparador;
+    text-align: justify;
+    text-justify: inter-word;
 }
 .bold{
     font-weight: bold;
