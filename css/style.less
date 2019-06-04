@@ -18,11 +18,10 @@
 @colorTextoPrincipal:#FFF;
 @colorTwitter:#1da1f2;
 a{
-    color:@colorLinks;
+    color:lighten(@colorPrincipal,60%);
     text-decoration: none;
     &:hover{
         color:@colorBordes;
-        text-decoration: underline;
         transition:2s;
     }
 }
@@ -133,6 +132,16 @@ body{
     }
     #github{
         grid-area:github;
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        img{
+            border-radius: 50%;
+            height: auto;
+            width: 100%;
+        }
+        p{
+            margin:20% 10%;
+        }
     }
     #tech{
         grid-area: tech;
