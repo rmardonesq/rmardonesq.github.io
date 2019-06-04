@@ -3,6 +3,7 @@
 
 //meyer reset
 @import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
+@import url(mediaQuerys.less);
 @alturaHeader:12%;
 @alturaPrincipal:auto;
 @alturaLinks:auto;
@@ -35,27 +36,50 @@ body{
     background:@colorPrincipal;
     color:@colorTextoPrincipal;
     display: grid;
-    gap: @anchoSeparador;
-    grid-template-rows: @alturaHeader @alturaPrincipal @alturaLinks;
+    grid-gap:@anchoSeparador;
+    grid-template-areas:    'cabecera cabecera cabecera'
+                            'bio hobbies work'
+                            'github tech tech';
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 2fr;
+    article{
+        background: lighten(@colorPrincipal,10%);
+        font-family: 'Montserrat', sans-serif;
+        padding:calc(@anchoSeparador * 2);
+        h3{
+            text-align:center;
+        }
+    }
     #cabecera{
-        padding:@anchoSeparador;
-        h1{
-            background: linear-gradient(to right, @colorPrincipalPalette1, @colorPrincipal);
+        background: linear-gradient(to right, @colorPrincipalPalette1, @colorPrincipal);
+        grid-area: cabecera;
+        display:grid;
+        grid-template-areas:    'titulo titulo titulo titulo titulo titulo titulo'
+                                'quote quote quote quote quote quote redes';
+        padding:0 0 5px 0;
+        width:100%;
+        div{
+            background: @colorPrincipal;
             font-family: 'Montserrat', sans-serif;
-            padding-bottom:2px;
-            #internoH1{
-                margin:0;
-                padding:0;
-                background:@colorPrincipal;
-            }
+            padding: @anchoSeparador;
+        }
+        div#about{
+            grid-area: titulo;
+            padding-top:calc(@anchoSeparador * 3);
+        }
+        div.quote{
+            grid-area: quote;
         }
         #redes{
+            display:grid;
+            grid-area: redes;
+            grid-template-columns: repeat(4,1fr);
             text-align: right;
             padding-right:calc(@anchoSeparador * 2);
             a{
                 color:@colorTextoPrincipal;
                 font-size:1.5rem;
-                margin-right:@anchoSeparador;
+                text-align: center;
                 &.facebook{
                     &:hover{
                         color:@colorFacebook;
@@ -79,28 +103,39 @@ body{
             }
         }
     }
-    #principal,#links{
-        display: grid;
-        gap:@anchoSeparador;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        font-family: 'Montserrat', sans-serif;
-        article{
-            &.work{
-                .grilla{
-                    display: grid;
-                    gap:@anchoSeparador;
-                    grid-template-columns: 40% auto;
-                    margin-bottom: @anchoSeparador;
-                    .itemName{
-                        text-align: right;
-                    }
-                }
+    #bio{
+        grid-area:bio;
+    }
+    #hobbies{
+        grid-area:hobbies;
+        padding:calc(@anchoSeparador * 4);
+    }
+    #work{
+        grid-area:work;
+        h3{
+            margin-bottom:@anchoSeparador;
+        }
+        .grilla{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            height: 100%;
+            width:100%;
+            .itemName{
+                padding-right: @anchoSeparador;
+                text-align:right;
             }
-            h3{
-                margin-bottom:@anchoSeparador;
-                text-align:center;
+            .itemValue{
+                padding-left: @anchoSeparador;
+                text-align:left; 
             }
         }
+    }
+    #github{
+        grid-area:github;
+    }
+    #tech{
+        grid-area: tech;
     }
 }
 h1,h2,h3,h4,h5{
@@ -120,4 +155,11 @@ p{
 }
 .bold{
     font-weight: bold;
+}
+.quote{
+    &:before{
+        content: "- ";
+    }
+    color:@colorBordes;
+    font-style: italic;
 }

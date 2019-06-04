@@ -1,0 +1,27 @@
+//https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488
+
+/*  ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops */
+@media (min-width: 1281px) {
+}
+@media (min-width: 481px) and (max-width: 1280) {
+    body{
+        grid-template-areas:    'cabecera cabecera'
+                                'bio hobbies'
+                                'work work'
+                                'github github'
+                                'tech tech'!important;
+        grid-template-columns: 1fr 1fr!important;
+    }
+}
+@media (max-width: 480px) {
+    body{
+        grid-template-areas:    'cabecera'
+                                'bio'
+                                'hobbies'
+                                'work'
+                                'github '
+                                'tech'!important;
+        grid-template-columns: 1fr!important;
+    }
+}
