@@ -6,13 +6,12 @@
 }
 @media screen and (min-width: 481px) and (max-width: 1280) {
     body{
-        grid-template-areas:    'cabecera'
-                                'bio'
-                                'hobbies'
-                                'work'
-                                'github '
-                                'tech'!important;
-        grid-template-columns: repeat(6,1fr)!important;
+        grid-template-areas:    'cabecera cabecera'
+                                'bio bio'
+                                'hobbies hobbies'
+                                'work work'
+                                'github tech'!important;
+        grid-template-columns: repeat(2,1fr)!important;
         #cabecera{
             grid-template-areas:    'titulo'
                                     'quote' 
@@ -30,7 +29,7 @@
                                 'work'
                                 'github '
                                 'tech'!important;
-        grid-template-columns: repeat(6,1fr)!important;
+        grid-template-columns: 1fr!important;
         #cabecera{
             grid-template-areas:    'titulo'
                                     'quote' 
