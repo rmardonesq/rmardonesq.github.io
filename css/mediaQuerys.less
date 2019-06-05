@@ -6,12 +6,20 @@
 }
 @media screen and (min-width: 481px) and (max-width: 1280) {
     body{
-        grid-template-areas:    'cabecera cabecera'
-                                'bio hobbies'
-                                'work work'
-                                'github github'
-                                'tech tech'!important;
-        grid-template-columns: 1fr 1fr!important;
+        grid-template-areas:    'cabecera'
+                                'bio'
+                                'hobbies'
+                                'work'
+                                'github '
+                                'tech'!important;
+        grid-template-columns: repeat(6,1fr)!important;
+        #cabecera{
+            grid-template-areas:    'titulo'
+                                    'quote' 
+                                    'redes'!important;
+            grid-template-columns: 1fr!important;
+            grid-template-rows: repeat(3,1fr);
+        }
     }
 }
 @media screen and (max-width: 480px) {
@@ -22,6 +30,13 @@
                                 'work'
                                 'github '
                                 'tech'!important;
-        grid-template-columns: 1fr!important;
+        grid-template-columns: repeat(6,1fr)!important;
+        #cabecera{
+            grid-template-areas:    'titulo'
+                                    'quote' 
+                                    'redes'!important;
+            grid-template-columns: 1fr!important;
+            grid-template-rows: repeat(3,1fr);
+        }
     }
 }
