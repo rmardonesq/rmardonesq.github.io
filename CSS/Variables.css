@@ -1,0 +1,10 @@
+/* Princess Luna https://color.adobe.com/ */
+:root {
+    --ColorFondoPrincipal: #091841;
+    --ColorFondoSecundario: #5357A6;
+    --ColorTextoPrincipal: #9EA4E6;
+    --ColorTextoDestacado: #1E91A9;
+    --ColorAdornos: #345ECE;
+    --DefaultPadding:10px;
+    --GridGap:10px;
+}

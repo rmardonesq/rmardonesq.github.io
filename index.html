@@ -1,88 +1,76 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet/less" type="text/css" href="css/style.less" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
-        <title>.about: Rodrigo Mardones.</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-    </head>
-    <body>
-        <header id="cabecera">
-            <div id="about">
-                <h1>.about: <span class="me">Rodrigo Mardones</span></h1>
-            </div>
-            <div class="quote">
-                De cada cual según sus capacidades, a cada cual según sus necesidades
-            </div>
-            <div id="redes">
-                <a class="facebook" href="https://www.facebook.com/rmardonesq" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                <a class="gmail" href="mailto:rmardonesq@gmail.com" target="_blank"><i class="fas fa-at"></i></a>
-                <a class="instagram" href="https://www.instagram.com/_hawksgaze/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="twitter" href="https://www.twitter.com/HawksGaze" target="_blank"><i class="fab fa-twitter-square"></i></a>
-            </div>
-        </header>
-            <article id="bio">
-                <h3>
-                    <i class="fas fa-user-circle"></i>
-                </h3>
-                <p>Soy ingeniero informático (INACAP), nacido el 1988.</p>
-                <p>Vivo en Puente Alto, Chile. Estoy casado con una excelente mujer y una hija recién nacida <i class="fas fa-heart"></i>.</p>
-                <p>Algún día me gustaría ser profesor y poder formar personas; por el momento, intento aportar con un grano de arena a la salud pública.</p>
-                <p>Intento cada día ser una persona más coherente conmigo mismo. Me gusta que las cosas 'fluyan', pero claro, con un correcto inicio.</p>
-            </article>
-            <article id="hobbies">
-                <h3>
-                        <i class="fas fa-gamepad"></i>
-                </h3>
-                <p>
-                    <i class="fab fa-wizards-of-the-coast"></i> Soy Jugador de <span class="mtg">Magic The Gathering</span>, principalmente de Commander. Uso a <b>Lord Windgrace</b> y a <b>Shalai, Voice of Plenty</b> como comandantes.
-                </p>
-                <p>
-                    <i class="fas fa-tv"></i> En cuanto a series, entre otros, me gusta la saga <span class="gundam">Gundam</span>  y el universo <span class="marvel">Marvel</span>. En Gundam, Athrun Zala y Gaelio Bauduin son mis referentes; en Marvel, Leopold Fitz y Matt Murdock son los mejores personajes de lo que conozco.
-                </p>
-                <p>
-                    <i class="fab fa-spotify"></i> En lo que respecta a música, mis favoritos de siempre son Linkin Park y HIGH and MIGHTY COLOR. Según Spotify, mi 2019 fue <a href="https://open.spotify.com/playlist/37i9dQZF1Etkz7VpSAIl7Q?si=PCdOc4CkRU-YxBhrtAPOug" target="_blank">así</a>.
-                </p>
-            </article>
-            <article id="work">
-                <h3>
-                    <i class="fas fa-briefcase"></i>
-                </h3>
-                <div class="grilla">
-                    <div class="itemName">Nestlé</div>
-                    <div class="valueName">Práctica y Análista de Productividad Industrial</div>
-                    <div class="itemName">trabajando.com</div>
-                    <div class="valueName">Desarrollador de Soporte</div>
-                    <div class="itemName">DBnet</div>
-                    <div class="valueName">Soporte de Aplicaciones</div>
-                    <div class="itemName">Tarragona</div>
-                    <div class="valueName">Desarrollador de aplicaciones y Business Intelligence</div>
-                    <div class="itemName">Complejo Asistencial Dr. Sotero del Rio</div>
-                    <div class="valueName">Ingeniero Desarrollador</div>
-                </div>
-            </article>
-            <article id="github">
-                        <img src="https://avatars1.githubusercontent.com/u/32649567?s=460&v=4" />
-                        <p>
-                            <i class="fab fa-github"></i>
-                            Mi repositorio GitHub es:
-                            <a href="https://github.com/rmardonesq" target="_blank">
-                                 rmardonesq
-                            </a>
-                        </p>
-            </article>
-            <article id="tech">
-                <p>
-                    <span class="bold">Lenguajes con los que he trabajado:</span> C#, VB, VBA, PHP, python, javascript. También SQL, a través de SQL Server, mySQL y ORACLE.
-                </p>
-                <p>
-                    <span class="bold">Tecnologías que he usado:</span> Bootstrap, UIkit, LESS css, jQuery, Ajax, Linq, Razor, webServices, DevExpress, Team Foundation Server, Git, QlikView, Sql Server Integration Services, Xamarin Forms.
-                </p>
-                <p>
-                    <span class="bold">Áreas a las que me gustaría llegar y dejar raíces: </span> Bases de Datos, Business Intelligence.
-                </p>
-            </article>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>.about: Rodrigo Mardones.</title>
+    <link href="CSS/Style.css" rel="stylesheet" type="text/css" />
+    <link href="FontAwesome/fontawesome.css" rel="stylesheet" />
+    <link href="FontAwesome/brands.css" rel="stylesheet" />
+    <link href="FontAwesome/solid.css" rel="stylesheet" />
+    <script defer src="FontAwesome/brands.js"></script>
+    <script defer src="FontAwesome/solid.js"></script>
+    <script defer src="FontAwesome/fontawesome.js"></script>
+</head>
+<body>
+    <header>
+        <h1> <i class="fas fa-user fa-sm"></i> Rodrigo Mardones Quinteros</h1>
+        <blockquote id="FraseReferencia" cite="https://es.wikipedia.org/wiki/De_cada_cual_seg%C3%BAn_sus_capacidades,_a_cada_cual_seg%C3%BAn_sus_necesidades#:~:text=a%20la%20b%C3%BAsqueda-,De%20cada%20cual%20seg%C3%BAn%20sus%20capacidades%2C%20a%20cada%20cual%20seg%C3%BAn,socialista%20o%20comunista%2C%20en%20el">
+            <p>De cada cual según sus capacidades, a cada cual según sus necesidades</p>
+        </blockquote>
+        <address>
+            <a class="Redes Facebook" href="https://www.facebook.com/rmardonesq" target="_blank"><i class="fab fa-facebook-square fa-lg"></i></a>
+            <a class="Redes Github" href="https://github.com/rmardonesq" target="_blank"><i class="fab fa-github-square  fa-lg"></i></a>
+            <a class="Redes Gmail" href="mailto:rmardonesq@gmail.com" target="_blank"><i class="fas fa-envelope  fa-lg"></i></a>
+            <a class="Redes Instagram" href="https://www.instagram.com/inresponseremember/" target="_blank"><i class="fab fa-instagram-square  fa-lg"></i></a>
+            <a class="Redes Twitter" href="https://www.twitter.com/HawksGaze" target="_blank"><i class="fab fa-twitter-square  fa-lg"></i></a>
+        </address>
+    </header>
+    <section id="Bio">
+        <ul>
+            <li class="Edad"><i class="fas fa-calendar mr-3"></i> Nací en 1988.</li>
+            <li class="Residencia"><i class="fas fa-home mr-3"></i>Puente Alto.</li>
+            <li class="Educacion"><i class="fas fa-university mr-3"></i>Ingeniero en ejecución Informático, INACAP.</li>
+            <li class="ObjetivoVida"><i class="fas fa-check-circle mr-5"></i>Algún día me gustaría ser Profesor. Por el momento, aporto con mi granito de arena en la Salud Pública.</li>
+        </ul>
+    </section>
+    <section id="Hobbies">
+        <ul>
+            <li class="MTG"><i class="fab fa-wizards-of-the-coast"></i> Soy jugador de Magic the Gathering. Actualmente me encuentro usando a <a href="https://www.moxfield.com/decks/ChX2n2n4dU-fgW8hr_VIMQ" target="_"><b>Marath, Will of the wild</b></a> y a <a href="https://www.moxfield.com/decks/VTVuo3PuWUuKdx9QYDWCAg" target="_blank"><b>Tergrid, God of Fright</b></a> en Commander.</li>
+            <li class="Series"><i class="fas fa-tv"></i>En cuanto a series, soy de seguir la saga Gundam y el MCU de Marvel (Entre otras). Me gusta destacar de estas a <b>Mobile Suit Gundam 0083: Stardust Memory</b> y <b>Agents of S.H.I.E.L.D</b> respectivamente.</li>
+            <li class="Musica"><i class="fas fa-headphones"></i>Mis gustos músicos son bien variados; me gusta disfrutar la música sin encasillarme. ¿Favoritos de la vida?: <b>Linkin Park</b> y <b>HIGH and MIGHTY COLOR</b>. Según <i class="fab fa-spotify"></i>Spotify, mi 2020 fue <a href="https://open.spotify.com/playlist/37i9dQZF1EMfz9Sa0lnOJ9?si=Rf-focQuQRq2IUtoyLiHBw" target="_blank">así</a>.</li>
+        </ul>
+    </section>
+    <section id="Trabajo">
+        <div class="Item">
+            <h3 class="Cargo">(Actual) Arquitecto BI</h3>
+            <span class="Lugar">Servicio de Salud Metropolitano Sur Oriente</span><span class="Duracion">Noviembre 2020 - Actualidad</span>
+        </div>
+        <div class="Item">
+            <h3 class="Cargo">Ingeniero Desarrollador</h3>
+            <span class="Lugar">Complejo Asistencial Dr. Sótero del Rio</span><span class="Duracion"> Mayo 2017 - Octubre 2020</span>
+        </div>
+        <div class="Item">
+            <h3 class="Cargo">Desarrollador de Aplicaciones y BI</h3>
+            <span class="Lugar">Tarragona</span><span class="Duracion">Octubre 2015 - Mayo 2017</span>
+        </div>
+        <div class="Item">
+            <h3 class="Cargo">Soporte de Aplicaciones</h3>
+            <span class="Lugar">DBnet</span><span class="Duracion">Febrero 2015 - Octubre 2015</span>
+        </div>
+        <div class="Item">
+            <h3 class="Cargo">Desarrollador de Soporte</h3>
+            <span class="Lugar">trabajando.com</span><span class="Duracion">Julio 2014 - Enero - 2015</span>
+        </div>
+        <div class="Item">
+            <h3 class="Cargo">Práctica Laboral y Analista de Productividad Industrial</h3>
+            <span class="Lugar">Nestlé</span><span class="Duracion"></span>
+        </div>
+    </section>
+    <section id="DesarrolloProfesional">
+        <p>Me gusta lo relacionado a las Bases de Datos y al Business Intelligence. Sin embargo, gran parte de mi experiencia Laboral ha sido en el área de Desarrollo.</p>
+        <p class="BD">En Bases de Datos he trabajado con Oracle 11g, SQL Server, PostreSQL, mySQL. En BI, con QlikView y Tableau a nivel de Visualización; para extracción, con Spoon(Pentaho) y SSIS(Microsoft).</p>
+        <p class="Codigo">En desarrollo, he usado principalmente .NET, PHP y Python -este en menor medida-. He desarrollo aplicaciones de escritorio y páginas web en equipo y en solitario, pasando por todos los niveles(Full Stack). Mi mayores orgullos son mi aporte en el <a href="https://portalpaciente.hospitalsoterodelrio.cl/" target="_blank"><b>Portal Paciente del CASR</b></a> y <b>Pulso Web</b>, también del CASR (En ambos fuí el desarrollador de los sitios).</p>
+        <p class="Documentacion">Para control de versiones he trabajado con Subversion, Git(Bitbucket, Github) y Team Foundation Server.</p>
+    </section>
+</body>
 </html>
