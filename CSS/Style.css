@@ -199,6 +199,14 @@ section#Hobbies {
             transition: opacity 1000ms, visibility 1000ms;
             visibility: collapse;
         }
+        section#Trabajo .Item span.Mostrar,
+        section#Trabajo .Item span.Mostrar {
+            border-color: var(--ColorTextoDestacado);
+            height: auto;
+            opacity: 1;
+            padding: var(--DefaultPadding);
+            visibility: visible;
+        }
     section#DesarrolloProfesional {
         border: 0;
         border-bottom: 5px solid;
