@@ -1,0 +1,12 @@
+/*
+https://htmlcolorcodes.com/es/selector-de-color/
+*/
+:root{
+    --ColorFondoBase: #091841;        /* body */
+    --ColorFondoZona1: #410918;      /* header/footer o sidebar */
+    --ColorFondoZona2: #184109;      /* tarjetas o detalles puntuales */
+
+    --ColorTexto: #efe3c8;
+    --ColorTextoSuave: #a9b4d0;
+    --ColorAcento: #d4a84b; 
+}

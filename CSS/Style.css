@@ -2,228 +2,254 @@
     Rodrigo Mardones Quinteros
     rmardonesq@gmail.com
 */
-@import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap');
-@import url(Variables.css);
-* {
-    background-color: var(--ColorFondoPrincipal);
-    font-family: 'Roboto', sans-serif!important;
-    color: var(--ColorTextoPrincipal);
-    transition: 1s;
+@import url(Reset.css);
+@import url(ColorScheme.css);
+.grupos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
-    *:before {
-        color: var(--ColorTextoDestacado);
-        font-family: 'Josefin Sans', sans-serif !important;
-    }
+.grupos h3{
+    color:var(--ColorAcento);
+}
+*{
+    transition: 0.5s;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+a:hover,:focus-visible {
+  outline: 2px solid var(--ColorAcento);
+  outline-offset: 3px;
+}
 a{
-    border-bottom: 2px solid var(--ColorTextoDestacado);
     text-decoration: none;
 }
-body, html {
-    height: calc(100%-20px);
-    margin-left:30px;
+body{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+}
+body,html{
+    background-color: var(--ColorFondoBase);
+    height:100%;;
+    width: 100%;
+}
+footer{
+    color:var(--ColorTextoSuave);
+    padding:5px;
+    text-align: right;
+}
+h1,h2,h3,h4,h5{
+    border-left: 0;
+    padding-left: 0.6em;
+    border-image: linear-gradient(to bottom, var(--ColorAcento), transparent) 1;
+    border-left: 4px solid;
+}
+h3,h4{
+    border:none;
+}
+header{
+    background-color: var(--ColorFondoBase);
+    padding:10px 20px;
+}
+header blockquote p::before{
+    content: "“ ";
+    font-size: 1.5rem;
+    color: var(--ColorAcento);
+    opacity: 0.8;
+    font-family: Georgia, serif;
+}
+header blockquote cite::before{
+    content: "ˮ - ";
+    font-size: 1.5rem;
+    color: var(--ColorAcento);
+    opacity: 0.8;
+    font-family: Georgia, serif;
+}
+header blockquote p{
+    margin: 0.5rem 0 1.5rem 0;
+    font-size: 0.88rem;
+    font-style: italic;
+}
+header blockquote cite{
+  font-style: normal;
+  color: var(--ColorTexto);
+}
+header h1{
+    color:var(--ColorTexto);
+}
+header :not(h1){
+    color:var(--ColorTextoSuave);
+    padding:0px;
+}
+header nav a{
+    border-radius:10px;
+    color:var(--ColorAcento);
+    display: block;
+    padding:5px;
+    margin:2px;
+}
+header nav a:hover,header nav a:focus-visible{
+    background-color: var(--ColorAcento);
+    color:var(--ColorFondoBase);
+
+}
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to left, var(--ColorAcento) 20%, transparent 80%);
+}
+main{
+    display: grid;
+    padding:10px 20px;
+}
+main section{
+    display: block;
+    padding:10px auto;
+    padding-left: 15px;
+    width: 100%;
+    margin-bottom:5px;
+}
+main section#SobreMi,
+main section#Experiencias h2{
+    color:var(--ColorTexto);
+}
+main section#Experiencias article{
+    border-left:2px solid var(--ColorAcento);
+    margin-left:20px;
+    padding-left:10px;
+    position: relative;
+
+}
+main section#Experiencias article:before{
+    content: "";
+    position: absolute;
+    left: -7px;               /* Centra el círculo exacto sobre la línea de 2px */
+    top: 10px;                 /* Ajusta la altura del punto según la primera línea */
+    width: 12px;
+    height: 12px;
+    background-color: var(--ColorAcento);
+    border-radius: 50%;
+    border: 2px solid var(--ColorTexto);
+}
+main section#Experiencias article.Actual:before{
+    content: "";
+    position: absolute;
+    left: -10px;               /* Centra el círculo exacto sobre la línea de 2px */
+    top: 5px;                 /* Ajusta la altura del punto según la primera línea */
+    width: 20px;
+    height: 20px;
+    background-color: var(--ColorTexto);
+    border-radius: 50%;
+    border: 2px solid var(--ColorAcento);
+}
+main section#Experiencias h3,
+main section#Experiencias h4{
+    border:none;
+}
+main section#Experiencias h3{
+    color:var(--ColorAcento);
+}
+main section#Experiencias h4{
+    color:var(--ColorTexto);
+}
+main section#Experiencias h4.Lugar{
+    color:var(--ColorTextoSuave)
+}
+
+main section#Tecnologias,
+main section#Contacto h2{
     margin-top:20px;
-    min-height: calc(100%-20px);
-    min-width: calc(100%-30px);
-    width: calc(100%-30px);
+    color:var(--ColorTexto);
 }
-body {
-    display:grid;
-    grid-gap: var(--GridGap);
-    grid-template-areas:    'Header'
-                            'Bio'
-                            'Hobbies'
-                            'Trabajo'
-                            'DesarrolloProfesional';
-    grid-template-columns:1fr;
-    grid-template-rows:repeat(min-content,5);
+main section p{
+    padding:5px;
 }
-    body header,
-    body section {
-        padding:var(--DefaultPadding);
-    }
-h1, h2, h3, h4, h5 {
-    border: 0;
-    border-left: 5px solid var(--ColorAdornos);
-    color: var(--ColorTextoDestacado);
-    font-family: 'Josefin Sans', sans-serif!important;
-    font-weight: bold;
-    padding-left: calc(var(--DefaultPadding) * 2);
+main section#SobreMi{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom:20px;
 }
-h1 {
-    font-size:2em;
+main section#SobreMi h2{
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
-h2 {
-    font-size: 1.5em;
+main section#SobreMi img{
+    border-radius: 50%;
+    border: 2px solid var(--ColorAcento);
+    width: 140px;
+    height: 140px;
+    justify-self: center;
+    object-fit: cover;
 }
-h3 {
-    font-size:1.3em;
+main section#SobreMi p{
+    padding-left:15px;
 }
-header {
-    background: var(--ColorFondoPrincipal) /*url(../../Images/tree.png) no-repeat no-repeat right 30%*/;
-    background-size: 40% auto;
-    border: 0;
-    border-bottom: 2px solid;
-    border-image-slice: 1;
-    border-width: 2px;
-    border-image-source: linear-gradient(to left, var(--ColorFondoPrincipal), var(--ColorTextoPrincipal), var(--ColorAdornos), var(--ColorFondoPrincipal));
-    grid-area: Header;
+main section ul{
+    list-style: none;
 }
-    header address {
-        background-color:var(--ColorTextoDestacado);
-        position:fixed;
-        right:0;
-        top:calc(50% - 75px);
-        width:50px;
-    }
-        header address a {
-            border-bottom: 0;
-            display:block;
-            height:30px;
-            width:50px;
-        }
-            header address a.Facebook:active .fa-facebook-square *,
-            header address a.Facebook:hover .fa-facebook-square *,
-            header address a.Facebook:focus .fa-facebook-square *{
-                color: #3b5998;
-            }
-            header address a.Github:active .fa-github-square *,
-            header address a.Github:hover .fa-github-square *,
-            header address a.Github:focus .fa-github-square * {
-                color: #FFF;
-            }
-            header address a.Gmail:active .fa-envelope *,
-            header address a.Gmail:hover .fa-envelope *,
-            header address a.Gmail:focus .fa-envelope * {
-                color: #FFF;
-            }
-            header address a.Instagram:active .fa-instagram-square *,
-            header address a.Instagram:hover .fa-instagram-square *,
-            header address a.Instagram:focus .fa-instagram-square * {
-                color: #DD2A7B;
-            }
-            header address a.Twitter:active .fa-twitter-square *,
-            header address a.Twitter:hover .fa-twitter-square *,
-            header address a.Twitter:focus .fa-twitter-square * {
-                color: #00ACEE;
-            }
-    header blockquote {
-        width:50%;
-    }
-    header blockquote p {
-        font-style:italic;
-    }
-        header blockquote p:after {
-            color: var(--ColorTextoDestacado);
-            content: "\"";
-            font-size: 1.5em;
-        }
-    header blockquote p:before {
-        color:var(--ColorTextoDestacado);
-        content:"\"";
-        font-size:1.5em;
-    }
-    header h1 {
-        width:50%;
-    }
-    section#Bio {
-    grid-area:Bio;
+main section :not(h2){
+    color:var(--ColorTextoSuave);
 }
-    section#Bio:before {
-        font-weight:bold;
-        padding: 0 calc(var(--DefaultPadding) / 2) 0 0;
+@media (min-width: 768px) {
+    header nav{
+        text-align: end;
     }
-li, p {
-    padding: calc(var(--DefaultPadding) / 2);
-    text-align: justify;
+    header nav a{
+        border-radius:10px;
+        color:var(--ColorAcento);
+        display: inline;
+        padding:0px 15px;
+    }
+    main section#Experiencias {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    main section#Experiencias h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 0.5rem;
+    }
+    main section#Experiencias article {
+        position: relative;
+        border-left: 2px solid var(--ColorAcento);
+        padding-left: 15px;
+        padding-bottom: 10px;
+        margin-left: 0; /* Reiniciamos el margin-left anterior para que el grid controle la separación */
+    }
+    main section#Experiencias article.Actual:before,
+    main section#Experiencias article:before{
+        top: 40%;                 
+    }
+    main section#SobreMi{
+        grid-template-columns: 170px 1fr;
+    }
 }
-section {
-    margin-right:60px;
+
+
+.contacto {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
 }
-    section li,
-    section p{
-        line-height:1.5em;
-    }
-section#Hobbies {
-    grid-area:Hobbies;
+
+.contacto a {
+    border-radius:10px;
+    color:var(--ColorAcento);
+    margin:2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.35em 0.8em;
 }
-    section#Hobbies:before {
-        content: "\f11b    Hobbies";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 400;
-        font-size: 1.5em;
-        font-weight: bold;
-        padding: calc(var(--DefaultPadding) / 2);
-        padding-left: 0;
-    }
-    section#Hobbies b,
-    section#DesarrolloProfesional b{
-        color: var(--ColorTextoDestacado);
-    }
-    section#Trabajo {
-        grid-area: Trabajo;
-    }
-        section#Trabajo:before {
-            content: "\f0b1     Historial Laboral";
-            display: block;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 400;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: var(--DefaultPadding);
-            padding: calc(var(--DefaultPadding) / 2);
-            padding-left: 0;
-        }
-    section#Trabajo .Item .Cargo{
-        line-height:2em;
-    }
-        section#Trabajo .Item:hover .Cargo,
-        section#Trabajo .Item:active .Cargo {
-            border-color:var(--ColorTextoDestacado);
-            color:var(--ColorTextoPrincipal);
-        }
-        section#Trabajo .Item:hover span,
-        section#Trabajo .Item:active span {
-            border-color: var(--ColorTextoDestacado);
-            height: auto;
-            opacity: 1;
-            padding: var(--DefaultPadding);
-            visibility: visible;
-        }
-        section#Trabajo .Item span {
-            -webkit-transition: opacity 600ms, visibility 600ms;
-            border-left: 5px solid var(--ColorAdornos);
-            color: var(--ColorTextoPrincipal);
-            display: block;
-            height:0;
-                    margin-left:50px;
-            opacity: 0;
-            transition: opacity 1000ms, visibility 1000ms;
-            visibility: collapse;
-        }
-        section#Trabajo .Item span.Mostrar,
-        section#Trabajo .Item span.Mostrar {
-            border-color: var(--ColorTextoDestacado);
-            height: auto;
-            opacity: 1;
-            padding: var(--DefaultPadding);
-            visibility: visible;
-        }
-    section#DesarrolloProfesional {
-        border: 0;
-        border-bottom: 5px solid;
-        border-image-slice: 1;
-        border-width: 5px;
-        border-image-source: linear-gradient(to left, var(--ColorFondoPrincipal), var(--ColorTextoPrincipal), var(--ColorAdornos), var(--ColorFondoPrincipal));
-        grid-area: DesarrolloProfesional;
-    }
-    section#DesarrolloProfesional:before {
-        content: "Desarrollo Laboral";
-        font-size: 1.5em;
-        font-weight:bold;
-        padding: calc(var(--DefaultPadding) / 2);
-        padding-left: 0;
-    }
-svg {
-    margin-right:5px;
+.contacto a:hover span, 
+.contacto a:focus-visible span{
+    color:var(--ColorAcento);
+}
+
+.contacto .icon {
+  width: 1.25em;
+  height: 1.25em;
 }
